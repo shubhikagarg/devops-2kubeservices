@@ -7,8 +7,8 @@ metadata:
 spec:
   selector:
     app: machineinfo-app
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - nodePort: 31000
+  - protocol: TCP        
     port: 9000
     targetPort: 9000

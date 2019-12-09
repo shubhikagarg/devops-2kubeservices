@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ctg-devops-machineinfo-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /machineinfo
+        backend:
+          serviceName: machineinfo-service
+          servicePort: 9000
+      - path : /hostinfo
+        backend:
+          serviceName: hostinfo-service
+          servicePort: 9000 
+        

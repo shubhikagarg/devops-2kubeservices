@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: hostinfo-service
+   labels: 
+     app: hostinfo-app
+spec:
+  selector:
+     app: hostinfo-app
+  type : LoadBalancer 
+  ports:
+   - protocol: TCP
+     port: 9000
+     targetPort: 9000
